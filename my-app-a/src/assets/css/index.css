@@ -16,7 +16,10 @@ p {
   color: #666;
 }
 
-.container {
+.container1,
+.container2,
+.container3,
+.container4 {
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px;

@@ -5,6 +5,7 @@ import Content from "./components/Content";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
+import Intro from "./components/Intro";
 
 const App = () => {
   return (
@@ -18,11 +19,7 @@ const App = () => {
         <Header />
         <Title />
         <Content />
-        <Content
-          text="I'm Avriel Tirza Priskila Parengkuan, an 18-year-old student at Universitas Klabat..."
-          imageSrc="/img/el.jpg"
-          altText="Image 2"
-        />
+        <Intro />
         <Skill />
         <Project />
       </div>
