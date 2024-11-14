@@ -1,4 +1,4 @@
-const Skills = () => {
+const Skill = () => {
   return (
     <div className="container3">
       <div className="skill">
