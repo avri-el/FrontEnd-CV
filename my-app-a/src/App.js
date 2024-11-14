@@ -1,3 +1,5 @@
+import Header from "./components/Header";
+import Title from "./components/Title";
 const App = () => {
   return (
     <div>
@@ -6,17 +8,8 @@ const App = () => {
       <link href="index.css" rel="stylesheet" />
       <title>Portfolio</title>
       <div className="container">
-        <div className="header">
-          <span>PORTFOLIO</span>
-          <span style={{ float: "right" }}>2024 &nbsp; | &nbsp; 14</span>
-        </div>
-        <div className="title">
-          Welcome <br />
-          <h6>to Avriel's portfolio.</h6>
-          <div className="images">
-            <img src="ell.jpg" alt="Image 1" />
-          </div>
-        </div>
+        <Header />
+        <TItle />
         <div className="content">
           <div className="text">
             <p>
