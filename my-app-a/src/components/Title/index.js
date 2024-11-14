@@ -4,7 +4,7 @@ const Title = () => {
       Welcome <br />
       <h6>to Avriel's portfolio.</h6>
       <div className="images">
-        <img src="ell.jpg" alt="Image 1" />
+        <img src="/img/ell.jpg" alt="Image 1" />
       </div>
     </div>
   );
