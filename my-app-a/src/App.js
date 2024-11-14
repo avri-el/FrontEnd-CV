@@ -10,20 +10,11 @@ import Intro from "./components/Intro";
 const App = () => {
   return (
     <div>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="index.css" rel="stylesheet" />
-      <title>Portfolio</title>
-
-      <div className="container">
-        <Header />
-        <Title />
-        <Content />
-        <Intro />
-        <Skill />
-        <Project />
-      </div>
-
+      <Header />
+      <Title />
+      <Intro />
+      <Skill />
+      <Project />
       <Footer />
     </div>
   );
