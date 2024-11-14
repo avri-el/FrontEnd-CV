@@ -13,7 +13,7 @@ const Intro = () => {
           opportunity to work on so far.
         </p>
         <div className="images2">
-          <img src="el.jpg" alt="Image 2" />
+          <img src="/img/el.jpg" alt="Image 2" />
         </div>
       </div>
     </div>

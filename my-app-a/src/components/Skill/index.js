@@ -11,7 +11,7 @@ const Skill = () => {
             visually engaging and functional websites.
           </p>
           <div className="images3">
-            <img src="uv2.jpg" alt="Image 3" />
+            <img src="/img/uv2.jpg" alt="Image 3" />
           </div>
           <br />
           <p>
