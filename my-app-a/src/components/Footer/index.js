@@ -3,7 +3,7 @@ const Footer = () => {
     <footer>
       <div className="social-links">
         <a
-          href="https://www.linkedin.com/in/avriel-parengkuan-09257b317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "
+          href="https://www.linkedin.com/in/avriel-parengkuan-09257b317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noreferrer"
         >
@@ -22,4 +22,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default Footer;
