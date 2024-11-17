@@ -1,23 +1,29 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase";
+
 const Skill = () => {
+  const [skill, setSkill] = useState({});
+
+  useEffect(() => {
+    const skillRef = ref(database, "skill/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(skillRef, (snapshot) => {
+      const data = snapshot.val();
+      setSkill(data);
+    });
+  }, []);
+
   return (
     <div className="container3">
       <div className="skill">
-        <h1>SKILL AND EXPERIENCE</h1>
+        <h1>{skill.title}</h1>
         <div className="content">
-          <p>
-            I’m skilled in time management, communication, and adaptability,
-            which help me work well in any environment. I have experience in
-            English, graphic design, photography, and web design, creating
-            visually engaging and functional websites.
-          </p>
+          <p>{skill.paragraf1}</p>
           <div className="images3">
             <img src="/img/uv2.jpg" alt="Image 3" />
           </div>
           <br />
-          <p>
-            In addition to my technical and creative skills, I have valuable
-            experience in organizational settings.
-          </p>
+          <p>{skill.paragraf2}</p>
         </div>
       </div>
     </div>

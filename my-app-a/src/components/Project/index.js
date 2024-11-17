@@ -1,16 +1,33 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase";
+
 const Project = () => {
+  const [project, setProject] = useState({});
+  const [links, setLinks] = useState({});
+
+  useEffect(() => {
+    const projectRef = ref(database, "project/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(projectRef, (snapshot) => {
+      const data = snapshot.val();
+      setProject(data);
+    });
+
+    const linksRef = ref(database, "links/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(linksRef, (snapshot) => {
+      const data = snapshot.val();
+      setLinks(data);
+    });
+  }, []);
+
   return (
     <div className="container4">
       <div className="project">
-        <h1>PROJECT</h1>
+        <h1>{project.title}</h1>
         <div className="content">
           <div className="git">
-            <p>You can visit my Github for the project:</p>
-            <a
-              href="https://github.com/avri-el"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <p>{project.pgit}</p>
+            <a href={links.git} target="_blank" rel="noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                 alt="GitHub Logo"
@@ -21,12 +38,8 @@ const Project = () => {
           <br />
           <br />
           <div className="design">
-            <p>You can visit my pinterest for the media:</p>
-            <a
-              href="https://pinterest.com/rovulettas"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <p>{project.ppint}</p>
+            <a href={links.pin} target="_blank" rel="noreferrer">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png"
                 alt="Pinterest Logo"
@@ -37,12 +50,8 @@ const Project = () => {
           <br />
           <br />
           <div className="carrd">
-            <p>And also, you can visit my carrd for more info:</p>
-            <a
-              href="https://seabed-a.carrd.co/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <p>{project.pcarrd}</p>
+            <a href={links.carrd} target="_blank" rel="noreferrer">
               <img
                 src="https://carrd.co/assets/docs/images/brand/svg/icon-color.svg"
                 alt="Carrd Logo"

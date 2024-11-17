@@ -6,14 +6,13 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBgEGrq41LkPrlkDoiGp7wiZ_hUF_5q6-0",
-  authDomain: "frontendgroupproject-92614.firebaseapp.com",
-  projectId: "frontendgroupproject-92614",
-  storageBucket: "frontendgroupproject-92614.firebasestorage.app",
-  messagingSenderId: "247424375188",
-  appId: "1:247424375188:web:a42be5e33d987b7d185781",
-  databaseURL:
-    "https://frontendgroupproject-92614-default-rtdb.firebaseio.com/",
+  apiKey: "AIzaSyC6VlNygo1K8aVtGGJMGRf_13ODMigvSUY",
+  authDomain: "frontend-cv.firebaseapp.com",
+  databaseURL: "https://frontend-cv-default-rtdb.firebaseio.com",
+  projectId: "frontend-cv",
+  storageBucket: "frontend-cv.firebasestorage.app",
+  messagingSenderId: "153656658579",
+  appId: "1:153656658579:web:405d8f6b51af5cf1eddb66",
 };
 
 // Inisialisasi Firebase

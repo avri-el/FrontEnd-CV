@@ -1,4 +1,18 @@
+import { ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
+import { database } from "../../config/Firebase/firebase";
+
 const Footer = () => {
+  const [project, setProject] = useState({});
+
+  useEffect(() => {
+    const projectRef = ref(database, "project/"); // Gunakan instance database yang sudah diinisialisasi
+    onValue(projectRef, (snapshot) => {
+      const data = snapshot.val();
+      setProject(data);
+    });
+  }, []);
+
   return (
     <footer>
       <div className="social-links">

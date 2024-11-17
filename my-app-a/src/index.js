@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./assets/css/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./config/Firebase";
+import "./config/Firebase/firebase";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
