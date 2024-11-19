@@ -6,7 +6,7 @@ const Footer = () => {
   const [links, setLinks] = useState({});
 
   useEffect(() => {
-    const linksRef = ref(database, "links/"); // Gunakan instance database yang sudah diinisialisasi
+    const linksRef = ref(database, "links/");
     onValue(linksRef, (snapshot) => {
       const data = snapshot.val();
       setLinks(data);

@@ -9,12 +9,12 @@ const Intro = () => {
   const [images, setImages] = useState({});
 
   useEffect(() => {
-    const IntroRef = ref(database, "Intro/"); // Gunakan instance database yang sudah diinisialisasi
+    const IntroRef = ref(database, "Intro/");
     onValue(IntroRef, (snapshot) => {
       const data = snapshot.val();
       setIntro(data);
     });
-    const imagesRef = ref(database, "images/"); // Gunakan instance database yang sudah diinisialisasi
+    const imagesRef = ref(database, "images/");
     onValue(imagesRef, (snapshot) => {
       const data = snapshot.val();
       setImages(data);
