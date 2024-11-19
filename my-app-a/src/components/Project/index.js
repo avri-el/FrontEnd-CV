@@ -10,19 +10,19 @@ const Project = () => {
   const [images, setImages] = useState({});
 
   useEffect(() => {
-    const projectRef = ref(database, "project/"); // Gunakan instance database yang sudah diinisialisasi
+    const projectRef = ref(database, "project/");
     onValue(projectRef, (snapshot) => {
       const data = snapshot.val();
       setProject(data);
     });
 
-    const linksRef = ref(database, "links/"); // Gunakan instance database yang sudah diinisialisasi
+    const linksRef = ref(database, "links/");
     onValue(linksRef, (snapshot) => {
       const data = snapshot.val();
       setLinks(data);
     });
 
-    const imagesRef = ref(database, "images/"); // Gunakan instance database yang sudah diinisialisasi
+    const imagesRef = ref(database, "images/");
     onValue(imagesRef, (snapshot) => {
       const data = snapshot.val();
       setImages(data);
