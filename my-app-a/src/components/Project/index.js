@@ -28,10 +28,7 @@ const Project = () => {
           <div className="git">
             <p>{project.pgit}</p>
             <a href={links.git} target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                alt="GitHub Logo"
-              />
+              <img src={links.logo_github} alt="GitHub Logo" />
               @avri-el
             </a>
           </div>
@@ -40,10 +37,7 @@ const Project = () => {
           <div className="design">
             <p>{project.ppint}</p>
             <a href={links.pin} target="_blank" rel="noreferrer">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png"
-                alt="Pinterest Logo"
-              />
+              <img src={links.logo_pin} alt="Pinterest Logo" />
               @rovulettas
             </a>
           </div>
@@ -52,10 +46,7 @@ const Project = () => {
           <div className="carrd">
             <p>{project.pcarrd}</p>
             <a href={links.carrd} target="_blank" rel="noreferrer">
-              <img
-                src="https://carrd.co/assets/docs/images/brand/svg/icon-color.svg"
-                alt="Carrd Logo"
-              />
+              <img src={links.logo_carrd} alt="Carrd Logo" />
               avriel's carrd
             </a>
           </div>
